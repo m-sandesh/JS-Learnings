@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS with Express</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <h2>Contact Form</h2>
+    <form action="/contact" method="POST" id="contact-form">
+        <label for="who">Who you want ?</label>
+        <input type="text" name="who" id="input-who" value="<%= qs.dept%>"><br>
+        <label for="name">What is your name?</label>
+        <input type="text" name="name" id="input-name" value="<%= qs.name%>"><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

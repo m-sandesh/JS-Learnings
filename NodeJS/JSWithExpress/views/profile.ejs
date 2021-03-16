@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile with EJS</title>
+</head>
+<style>
+    body {
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <!-- including partial/repetative views using include tag -->
+    <%- include('partials/navbar.ejs') %>
+
+    <!-- access the js data into ejs using the <%= %> format below. it is dynamic. -->
+    <h2>You are viewing profile for: <%= profile.id%></h2>
+    <p>
+        <b>Name: </b><%= name%>
+        <br>
+        <b>Age: </b><%= profile.age%>
+        <br>
+        <b>Department: </b><%= profile.department%>
+        <br>
+        <b>Hobbies: </b><% profile.hobbies.forEach((item)=>{ %>
+        <%= item %>,
+        <% }); %>
+    </p>
+</body>
+
+</html>
